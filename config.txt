@@ -2,7 +2,6 @@
 # Student Information
 Surname: Ul-Haq
 GivenNames: Mohammad Saif
-StudentID: 20180199
 
 # Global settings
 output_root: output

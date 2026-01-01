@@ -7,20 +7,20 @@ A comprehensive machine perception system for detecting, segmenting, and recogni
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.0+-green.svg)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
-## 🎯 Project Overview
+##  Project Overview
 
 This project implements a complete end-to-end pipeline for automated building number extraction from photographs. The system is designed to handle various signage types, including plaques, wall-mounted lettering, and atypical designs commonly found on university campuses.
 
 ### Key Features
 
-- **🔍 Robust Detection**: YOLOv8-based detector with 99% precision and 85% recall
-- **✂️ Intelligent Segmentation**: Hybrid segmentation combining learned and heuristic approaches
-- **🔤 Character Recognition**: Custom CNN achieving 88.9% accuracy on EMNIST benchmark
-- **🚀 End-to-End Pipeline**: Fully integrated system from image input to text output
-- **⚙️ Highly Configurable**: Centralized configuration system with command-line overrides
-- **📊 Production Ready**: Handles negative cases, edge cases, and achieves <1 minute runtime
+- **Robust Detection**: YOLOv8-based detector with 99% precision and 85% recall
+- **Intelligent Segmentation**: Hybrid segmentation combining learned and heuristic approaches
+- **Character Recognition**: Custom CNN achieving 88.9% accuracy on EMNIST benchmark
+- **End-to-End Pipeline**: Fully integrated system from image input to text output
+- **Highly Configurable**: Centralized configuration system with command-line overrides
+- **Production Ready**: Handles negative cases, edge cases, and achieves <1 minute runtime
 
-## 🏗️ Architecture
+## Architecture
 
 The system consists of four main components:
 
@@ -34,7 +34,7 @@ Input Image → Detection → Segmentation → Recognition → Output Text
               (YOLOv8)   (Hybrid CNN)   (Custom CNN)   (Validated)
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -47,7 +47,7 @@ Input Image → Detection → Segmentation → Recognition → Output Text
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/building-number-detection.git
-cd building-number-detection/assignment/ulhaq_mohammadsaif_20180199
+cd building-number-detection
 
 # Create and activate conda environment
 conda env create -f comp3007.yml
@@ -86,7 +86,7 @@ ls output/task4/
 # → img1.txt, img2.txt, img3.txt, img4.txt (img5.txt correctly omitted for negative)
 ```
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 ### Detection (Task 1)
 - **Precision**: 0.99
@@ -109,7 +109,7 @@ ls output/task4/
 - **Execution Time**: <38 seconds for 5 images (on RTX 3080)
 - **Validation**: 4/4 positive images correctly processed, 1/1 negative correctly rejected
 
-## 🎓 Technical Details
+## Technical Details
 
 ### Datasets Used
 
@@ -157,10 +157,10 @@ python assignment.py task2 /path/to/crops --seg_mode hybrid
 python assignment.py task3 /path/to/chars --rec_confidence_threshold 0.8
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-ulhaq_mohammadsaif_20180199/
+project-root/
 ├── assignment.py          # Main entry point
 ├── task1.py              # Detection implementation
 ├── task2.py              # Segmentation implementation
@@ -186,7 +186,7 @@ ulhaq_mohammadsaif_20180199/
     └── task4/           # Final text outputs
 ```
 
-## 🎨 Example Results
+## Example Results
 
 ### Input Image → Detection → Segmentation → Recognition
 
@@ -202,7 +202,7 @@ Recognition: "200B" (with confidence scores)
 Output: 200B.txt
 ```
 
-## 🔧 Advanced Configuration
+## Advanced Configuration
 
 ### Key Configuration Parameters
 
@@ -224,7 +224,7 @@ Output: 200B.txt
 
 See `docs/report.md` for comprehensive configuration guide.
 
-## 🛠️ Development
+## Development
 
 ### Training New Models
 
@@ -249,14 +249,14 @@ python assignment.py task4 ./validation/
 diff -r output/task4/ expected_output/
 ```
 
-## 🐛 Known Limitations
+## Known Limitations
 
 - **Character Set**: Currently limited to `0123456789ABCD`
 - **Single Detection**: Assumes one building number per image
 - **Specular Highlights**: Type III signage with highlights may produce low confidence
 - **Recognition Accuracy**: 88.9% leaves room for improvement on stylized characters
 
-## 🚀 Future Improvements
+## Future Improvements
 
 1. **Language Model Integration**: Add rule-based validation for building number sequences
 2. **Semi-Supervised Learning**: Reduce reliance on labeled data
@@ -264,7 +264,7 @@ diff -r output/task4/ expected_output/
 4. **Automated Testing**: Regression test suite for configuration changes
 5. **Extended Character Set**: Support additional letters and special characters
 
-## 📚 References
+## References
 
 1. [Building Numbers Dataset](https://universe.roboflow.com/mp-data/building-numbers-f6mly-vj3up) - Roboflow Universe
 2. [Number Character Detection Dataset](https://universe.roboflow.com/mp-assignment-8jzdp/number-character-detection-3rtu3) - Roboflow Universe
@@ -272,24 +272,15 @@ diff -r output/task4/ expected_output/
 4. [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) - Object detection framework
 5. [EMNIST Dataset](https://www.nist.gov/itl/products-and-services/emnist-dataset) - Extended MNIST
 
-## 📄 License
+## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](../../LICENSE) file for details.
 
-## 👤 Author
+## Author
 
 **Mohammad Saif Ul Haq**
-- Student ID: 20180199
 - University: Curtin University
 - Course: COMP3007 - Machine Perception
 
-## 🙏 Acknowledgments
-
-- Curtin University for providing the assignment framework
-- Roboflow community for public datasets
-- Ultralytics team for YOLOv8 framework
-- NIST for EMNIST dataset
-
 ---
 
-*This project was developed as part of COMP3007 Machine Perception course at Curtin University. It demonstrates practical application of deep learning and computer vision techniques for real-world problems.*
