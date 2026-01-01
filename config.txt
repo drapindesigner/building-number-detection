@@ -1,0 +1,50 @@
+
+# Student Information
+Surname: Ul-Haq
+GivenNames: Mohammad Saif
+StudentID: 20180199
+
+# Global settings
+output_root: output
+seed: 1337
+
+# YOLO detector
+det_weights: data/detector/best.pt
+det_conf: 0.25
+det_iou: 0.45
+det_max_det: 5
+det_img: 640
+det_crop_expand: 1.15
+
+# Character segmentation
+seg_mode: hybrid
+seg_model_weights: data/segmenter/best.pt
+seg_model_conf: 0.25
+seg_model_iou: 0.45
+seg_model_img: 320
+seg_model_max_det: 6
+seg_model_min_return_conf: 0.45
+seg_min_area: 70
+seg_max_area_ratio: 0.55
+seg_min_aspect: 0.3
+seg_max_aspect: 1.15
+seg_min_height_ratio: 0.4
+seg_max_height_ratio: 1.05
+seg_padding: 6
+seg_binarization: adaptive
+seg_gaussian_ksize: 5
+seg_clahe_clip: 2.0
+seg_clahe_grid: 8
+seg_duplicate_iou: 0.3
+seg_min_relative_area: 0.5
+seg_merge_gap_px: 4
+seg_merge_overlap_px: 8
+seg_min_width_ratio: 0.6
+
+# Character recognition
+rec_weights: data/recognizer/best.pt
+rec_image_size: 32
+rec_charset: 0123456789ABCD
+rec_confidence_threshold: 0.30
+rec_temperature: 1.0
+rec_smoothing: 0.0

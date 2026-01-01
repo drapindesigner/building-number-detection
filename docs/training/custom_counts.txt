@@ -1,0 +1,15 @@
+Class counts in data/custom_digits (after regenerating from Number-Character Classification.v4-tim_dataset.folder):
+0: 634
+1: 507
+2: 454
+3: 257
+4: 165
+5: 215
+6: 34
+7: 30
+8: 53
+9: 35
+A: 25
+B: 21
+C: 27
+D: 21
